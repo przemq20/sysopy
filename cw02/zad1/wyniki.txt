@@ -1,0 +1,239 @@
+Na podstawie wyników można zauważyć, że nie ma wielkich różnic między funkcjami bibliotecznymi a systemowymi.
+Kopiowanie jest zawsze szybsze przy użyciu funkcji bibliotecznych.
+Sortowanie wykonywane za pomocą funkcji bibliotecznych jest szybsze dla mniejszych ilości znaków w linii, ale przy większej ilości linii wydajniejsze stają się funkcje systemowe.
+
+
+
+Size 1:
+
+Records count: 1000
+
+Library functions: 
+
+copy tests/t1 tests/t1_1 1000 1 lib:
+user: 0.000000, sys: 0.000000
+
+sort tests/t1_1 1000 1 lib:
+user: 0.590000, sys: 0.570000
+
+System functions:
+
+copy tests/t1 tests/t1_2 1000 1 sys:
+user: 0.000000, sys: 0.010000
+
+sort tests/t1_2 1000 1 sys:
+user: 0.780000, sys: 3.980000
+
+Records count: 2000
+
+Library functions: 
+
+copy tests/t2 tests/t2_1 2000 1 lib:
+user: 0.000000, sys: 0.000000
+
+sort tests/t2_1 2000 1 lib:
+user: 1.640000, sys: 2.680000
+
+System functions:
+
+copy tests/t2 tests/t2_2 2000 1 sys:
+user: 0.010000, sys: 0.010000
+
+sort tests/t2_2 2000 1 sys:
+user: 3.760000, sys: 15.210000
+
+
+Size 4:
+
+Records count: 10000
+
+Library functions: 
+
+copy tests/t3 tests/t3_1 10000 4 lib:
+user: 0.000000, sys: 0.000000
+
+sort tests/t3_1 10000 4 lib:
+user: 0.680000, sys: 2.460000
+
+System functions:
+
+copy tests/t3 tests/t3_2 10000 4 sys:
+user: 0.010000, sys: 0.070000
+
+sort tests/t3_2 10000 4 sys:
+user: 0.680000, sys: 2.780000
+
+Records count: 20000
+
+Library functions: 
+
+copy tests/t4 tests/t4_1 20000 4 lib:
+user: 0.000000, sys: 0.000000
+
+sort tests/t4_1 20000 4 lib:
+user: 1.700000, sys: 5.870000
+
+System functions:
+
+copy tests/t4 tests/t4_2 20000 4 sys:
+user: 0.000000, sys: 0.180000
+
+sort tests/t4_2 20000 4 sys:
+user: 1.340000, sys: 6.430000
+
+
+Size 512:
+
+Records count: 10000
+
+Library functions: 
+
+copy tests/t5 tests/t5_1 10000 512 lib:
+user: 0.000000, sys: 0.010000
+
+sort tests/t5_1 10000 512 lib:
+user: 0.700000, sys: 3.520000
+
+System functions:
+
+copy tests/t5 tests/t5_2 10000 512 sys:
+user: 0.000000, sys: 0.100000
+
+sort tests/t5_2 10000 512 sys:
+user: 0.700000, sys: 2.890000
+
+Records count: 20000
+
+Library functions: 
+
+copy tests/t6 tests/t6_1 20000 512 lib:
+user: 0.000000, sys: 0.040000
+
+sort tests/t6_1 20000 512 lib:
+user: 1.540000, sys: 7.120000
+
+System functions:
+
+copy tests/t6 tests/t6_2 20000 512 sys:
+user: 0.040000, sys: 0.150000
+
+sort tests/t6_2 20000 512 sys:
+user: 1.530000, sys: 5.860000
+
+
+Size 1024:
+
+Records count: 10000
+
+Library functions: 
+
+copy tests/t7 tests/t7_1 10000 1024 lib:
+user: 0.000000, sys: 0.040000
+
+sort tests/t7_1 10000 1024 lib:
+user: 0.930000, sys: 3.020000
+
+System functions:
+
+copy tests/t7 tests/t7_2 10000 1024 sys:
+user: 0.000000, sys: 0.120000
+
+sort tests/t7_2 10000 1024 sys:
+user: 0.540000, sys: 2.840000
+
+Records count: 20000
+
+Library functions: 
+
+copy tests/t8 tests/t8_1 20000 1024 lib:
+user: 0.010000, sys: 0.080000
+
+sort tests/t8_1 20000 1024 lib:
+user: 1.310000, sys: 6.890000
+
+System functions:
+
+copy tests/t8 tests/t8_2 20000 1024 sys:
+user: 0.000000, sys: 0.210000
+
+sort tests/t8_2 20000 1024 sys:
+user: 1.140000, sys: 6.100000
+
+
+Size 4096:
+
+Records count: 10000
+
+Library functions: 
+
+copy tests/t9 tests/t9_1 10000 4096 lib:
+user: 0.010000, sys: 0.140000
+
+sort tests/t9_1 10000 4096 lib:
+user: 0.810000, sys: 3.340000
+
+System functions:
+
+copy tests/t9 tests/t9_2 10000 4096 sys:
+user: 0.010000, sys: 0.140000
+
+sort tests/t9_2 10000 4096 sys:
+user: 0.650000, sys: 3.310000
+
+Records count: 20000
+
+Library functions: 
+
+copy tests/t10 tests/t10_1 20000 4096 lib:
+user: 0.030000, sys: 0.290000
+
+sort tests/t10_1 20000 4096 lib:
+user: 1.700000, sys: 8.630000
+
+System functions:
+
+copy tests/t10 tests/t10_1 20000 4096 sys:
+user: 0.030000, sys: 0.260000
+
+sort tests/t10_1 20000 4096 sys:
+user: 1.650000, sys: 8.920000
+
+
+Size 8192:
+
+Records count: 10000
+
+Library functions: 
+
+copy tests/t11 tests/t11_1 10000 8192 lib:
+user: 0.030000, sys: 0.250000
+
+sort tests/t11_1 10000 8192 lib:
+user: 0.980000, sys: 3.860000
+
+System functions:
+
+copy tests/t11 tests/t11_2 10000 8192 sys:
+user: 0.000000, sys: 0.170000
+
+sort tests/t11_2 10000 8192 sys:
+user: 0.780000, sys: 3.900000
+
+Records count: 20000
+
+Library functions: 
+
+copy tests/t12 tests/t12_1 20000 8192 lib:
+user: 0.030000, sys: 0.480000
+
+sort tests/t12_1 20000 8192 lib:
+user: 1.590000, sys: 8.710000
+
+System functions:
+
+copy tests/t12 tests/t12_2 20000 8192 sys:
+user: 0.010000, sys: 0.350000
+
+sort tests/t12_2 20000 8192 sys:
+user: 1.670000, sys: 7.960000
+

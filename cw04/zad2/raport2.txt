@@ -1,0 +1,3 @@
+Ustawienia dotyczące blokowania i ignorowania sygnałów są przekazywane do procesów potomnych gdy wykonamy funkcję fork lub funkcję exec. 
+
+Obsługa sygnałów z użyciem funkcji signal zostaje zachowana w procesie potomnym utworzonym komendą fork.
